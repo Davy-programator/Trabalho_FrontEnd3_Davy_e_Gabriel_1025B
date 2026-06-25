@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilizacao.css">
+    <title>Menu de exploracao Rick and Morty</title>
+
+</head>
+
+<body>
+
+    <h1>Encontre seu personagem de Rick and Morty</h1>
+
+    <div class="busca-container">
+        <input type="text" id="personagem-input" placeholder="Digite um personagem">
+
+        <button id="btn-buscar">
+            Buscar
+        </button>
+    </div>
+
+    <p id="erro" class="erro"></p>
+
+    <div id="card" class="card"></div>
+
+    <h2>Histórico de Pesquisas</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Personagem</th>
+                <th>Status</th>
+                <th>Excluir</th>
+            </tr>
+        </thead>
+
+        <tbody id="historico"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
