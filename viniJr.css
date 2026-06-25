@@ -1,0 +1,227 @@
+/* ========================================================
+   🎨 CONFIGURAÇÕES GERAIS E RESET
+   ======================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0c1b, #201a3a);
+    color: #f1f1f1;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+}
+
+/* ========================================================
+   📦 PAINÉIS DE TELA (Cards Principais)
+   ======================================================== */
+.card-painel {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.card-painel h2 {
+    color: #00ff88;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.card-painel p {
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+/* ========================================================
+   📝 FORMULÁRIOS E CAMPOS DE ENTRADA
+   ======================================================== */
+.campo {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ddd;
+    font-weight: 600;
+}
+
+.campo input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid #332a5a;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.campo input:focus {
+    border-color: #00ff88;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+}
+
+/* ========================================================
+   🔘 BOTÕES DO SISTEMA
+   ======================================================== */
+.btn-principal {
+    background: linear-gradient(90deg, #00ff88, #00bdff);
+    color: #0f0c1b;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.btn-principal:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
+}
+
+.btn-secundario {
+    background: transparent;
+    border: 2px solid #ff007f;
+    color: #ff007f;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-secundario:hover {
+    background: #ff007f;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+}
+
+/* ========================================================
+   🃏 CARTAS ESTILO SUPER TRUNFO
+   ======================================================== */
+.container-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.super-trunfo-card {
+    position: relative; /* Base de posicionamento do Nick no canto superior */
+    background: linear-gradient(145deg, #1d1836, #0d0a1a);
+    border: 4px solid #00ff88; /* Borda Verde para Masculino (Default) */
+    border-radius: 14px;
+    width: 260px;
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-align: left;
+}
+
+/* Customização da borda para cartas femininas */
+.super-trunfo-card.female {
+    border-color: #ff007f;
+}
+
+/* Efeitos de Hover (Efeito de erguer a carta) */
+.super-trunfo-card:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 255, 136, 0.3);
+}
+
+.super-trunfo-card.female:hover {
+    box-shadow: 0 15px 30px rgba(255, 0, 127, 0.3);
+}
+
+/* 🏷️ Tarjeta com o Nick (Canto Superior Esquerdo) */
+.card-dono {
+    position: absolute;
+    top: -12px;
+    left: 12px;
+    background: #00ff88;
+    color: #0f0c1b;
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.super-trunfo-card.female .card-dono {
+    background: #ff007f;
+    color: #fff;
+}
+
+/* 🖼️ Elementos internos da Carta (API) */
+.card-imagem {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid rgba(255,255,255,0.1);
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+.card-nome-char {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 4px;
+}
+
+.card-status {
+    font-size: 0.85rem;
+    color: #bbb;
+    margin-bottom: 4px;
+}
+
+.card-status span {
+    color: #00bdff;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.carregando {
+    color: #00bdff;
+    font-style: italic;
+    font-size: 1.1rem;
+    animation: pulsar 1.5s infinite ease-in-out;
+}
+
+@keyframes pulsar {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
