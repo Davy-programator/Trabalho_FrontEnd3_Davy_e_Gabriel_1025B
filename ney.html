@@ -1,51 +1,22 @@
+<!-- Davy Rewel e Gabriel Britto 1025b -->
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Trunfo - Sistema de Contas</title>
+    <title>Davy_Gabriel_1025b</title>
     <link rel="stylesheet" href="viniJr.css">
 </head>
+
 <body>
-
     <main class="container">
-        <section id="tela-cadastro" class="card-painel">
-            <h2>🔐 Entrar ou Cadastrar</h2>
-            <p>Digite seu Nick e Senha. Se a conta já existir, você verá seu card!</p>
-            <form id="form-cadastro">
-                <div class="campo">
-                    <label for="nome">Nick do Jogador:</label>
-                    <input type="text" id="nome" required placeholder="Ex: Davy">
-                </div>
-                <div class="campo">
-                    <label for="senha">Senha:</label>
-                    <input type="password" id="senha" required placeholder="••••••••">
-                </div>
-                <button type="submit" class="btn-principal">Acessar Sistema</button>
-            </form>
-        </section>
-
-        <section id="tela-selecao" class="card-painel hidden">
-            <h2>✨ Escolha seu Deck</h2>
-            <p>Você ainda não tem um card nesta conta. Escolha um para salvar!</p>
-            
-            <div class="container-cards" id="cards-container">
-                <p class="carregando">Buscando personagens na API cósmica...</p>
-            </div>
-
-            <button id="btn-voltar-cadastro" class="btn-secundario">⬅️ Voltar ao Início</button>
-        </section>
-
-        <section id="tela-perfil" class="card-painel hidden">
-            <h2>🏆 Card Carregado!</h2>
-            <p>Esta é a carta estocada para a sua conta.</p>
-            
-            <div id="card-escolhido-container"></div>
-            
-            <button id="btn-logout" class="btn-secundario">Logout (Sair da Conta)</button>
-        </section>
+        <div class="cards">
+            <h1 class="nome_usuario"></h1>
+        </div>
     </main>
 
     <script src="endryck.js" type="module"></script>
 </body>
+
 </html>
